@@ -95,8 +95,8 @@ app.layout = html.Div([
             dcc.Graph(id = 'pie_chart',style = {'textAlign':'right'})
                       ],
             style={'columnCount': 2}),
-    html.Br(),
-    html.Br(),
+    # html.Br(),
+    # html.Br(),
     #html.Div(id = 'table'),
     html.H2('Searched Results:',style={'textAlign': 'left'}),
     html.Div(id = 'datatable'),
