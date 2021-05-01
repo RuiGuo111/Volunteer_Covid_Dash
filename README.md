@@ -24,6 +24,6 @@ The main motivations for this dashboard is to:
 
 ### Further study
 - Be more user-friendly by creating the clickable link for each row.
-- Mine more data such as the specific disease category for each clinical study and forecast the hottest research direction of clinical studies in post COVID19 times.
+- Dig more data such as the specific disease category for each clinical study and forecast the hottest research direction of clinical studies in post COVID19 times.
 - Visualize the total number of each state, city and authority to compare which one has more interest on research.
 
