@@ -26,5 +26,5 @@ and also can give an overview about how the research process of the clinical tri
 ### Further study
 - Add the clickable link to each row of data to become more user friendly.
 - Extract more data such as the specific category for each clinical study and provide the rough direction of the most recent clinical studies.
-- Visualize the total number of each state, city and authority to which one is in the top level of research.
+- Visualize the total number of each state, city and authority to compare which one has more interest on research.
 
