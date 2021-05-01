@@ -9,22 +9,21 @@ The final dashboard is deployed on Heroku [here](https://volunteer-covid-clinica
 This dashboard summarizes and re-categorizes the information of 1266 on-going clinical trials related to COVID-19 treatment across the United States till April 26th 2021. The pie chart displays the percentage and number of clinical trails related to Covid diseases by city using certain criterias. Meanwhile, detailed information about the reference number, recruiting status, study topic, location authority and link is shown in the following table.
 
 The main motivations for this dashboard is to:
- - Provide an easy-to-access pathway for people who are willing to be volunteers for COVID-19 clinical trial  to search recruiting information filtered by location, gender and clinical phase and finally help them to make the best decision.
+ - Provide an easy-to-access pathway for people who are willing to be volunteers for COVID-19 clinical trials to search recruiting information filtered by location, gender and clinical phase and help them to make the best decision.
  - Give an overview about how the research process of the clinical trials is going and which cities/states/compan/universities are conducting heavy clinical trials. 
 
 ### Data Sources
 
 - Data is collected from this [website](https://clinicaltrials.gov/) which is supporting to download csv file directly. 
-- The dataset includes 1266 studies originally and in the 7625 rows of data are taking into analyzed due to complex location information. Cities,states and authorities are combined in location column and there are multiple combined locations which make sense because some clinical trials are collaborated across multiple companied and universities or even across countries. So location data cleaning is through the following way:
-   1. Split multiple combined locations into separated ones and then split the city, state and authority within each location.
-   2. Countries outside the America are excluded since the dashboard visualization is only about local conutry. 
-   3. Each clinical trial may take count more than once due to collaboration.
-- Missing values are detected in column Phase which represents the process of the clinical trial. Some trials don't split into diffrent phases, so we replace the null value with no defined phase.
-- Recategorize the 12 kinds of recruting status information into 3 mains ( recruiting, potential recruiting and no recruiting) based on the recruiting status explanation from the website.
-- All codes work analysis is based on cleaned pickle file.
+- 7625 observations are extracted from 1266 studies because of the complexity of the location information. Multiple pairs of cities, states and authorities are stacked in one column which can be explained that some clinical trials are collaborated across multiple companies and universities or even across countries. So the location data is cleaned  through the following approach:
+   1. Seperate multiple combined locations into individual location shown as multiple rows and then split the city, state and authority information into 3 new columns within each row.
+   2. Countries outside U.S. are excluded since the dashboard visualization is only focus on local country. 
+- Missing values are detected in column Phase which represents the process of the clinical trial. Some trials don't split into single phase, so we replace the null value with no defined phase.
+- Recategorize the 12 kinds of recruting status information into 3 main category including recruiting, potential recruiting and no recruiting based on the recruiting status explanation from the website.
+- All codes work is based on cleaned pickle file.
 
 ### Further study
-- Add the clickable link to each row of data to become more user friendly.
-- Extract more data such as the specific category for each clinical study and provide the rough direction of the most recent clinical studies.
+- Be more user-friendly by creating the clickable link for each row.
+- Mine more data such as the specific disease category for each clinical study and forecast the hottest research direction of clinical studies in post COVID19 times.
 - Visualize the total number of each state, city and authority to compare which one has more interest on research.
 
