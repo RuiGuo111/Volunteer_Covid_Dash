@@ -10,7 +10,7 @@ This dashboard summarizes and re-categorizes the information of 1266 on-going cl
 
 The main motivations for this dashboard is to:
  - Provide an easy-to-access pathway for people who are willing to be volunteers for COVID-19 clinical trial  to search recruiting information filtered by location, gender and clinical phase and finally help them to make the best decision.
-and also can give an overview about how the research process of the clinical trials is going and which city is conducting heavy clinical trials. 
+ - Give an overview about how the research process of the clinical trials is going and which cities/states/compan/universities are conducting heavy clinical trials. 
 
 ### Data Sources
 
