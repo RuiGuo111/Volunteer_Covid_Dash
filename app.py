@@ -50,56 +50,57 @@ app.layout = html.Div([
                    is shown in the following table.'),
     html.Br(),
     html.Div([
-    html.Label(["Choose the State:"]),
-    dcc.Dropdown(
-        id='states_dropdown', 
-        options=[{'value': x, 'label': x} 
-                  for x in df.State.sort_values().unique()],
-        value='Massachusetts',
-        multi = False,
-        clearable=False,
-        style = {"width":"50%"}
-      ),
-    html.Br(),
-    html.Label(["Choose the Status:"]),
-    dcc.Dropdown(
-        id='status_dropdown', 
-        options=[{'value': y, 'label': y} 
-                  for y in df.Status.sort_values().unique()],
-        value='Potential Recruiting',
-        multi = False,
-        clearable=False,
-        style = {"width":"50%"}
-      ),
-    html.Br(),
-    html.Label(["Choose the Gender:"]),
-    dcc.RadioItems(
-        id = 'gender_radioItems',
-    options=[
-        {'label': 'All', 'value': 'All'},
-        {'label': 'Female Only', 'value': 'Famale Only'},
-        {'label': 'Male Only', 'value': 'Male Only'}
-    ],
-    value='All',
-    labelStyle={'display': 'inline-block'}
-    ),
-    html.Br(),
-    html.Label(["Choose the Phase:"]),
-    dcc.RadioItems(
-        id = 'phase_radioItems',
-    options=[
-        {'label': y, 'value': y}
-         for y in df.Phases.sort_values().unique()],
-    value='No Defined Phase'
-    ),
-    dcc.Graph(id = 'pie_chart',style = {'textAlign':'right'})
-    ],style={'columnCount': 2}),
+             html.Label(["Choose the State:"]),
+             dcc.Dropdown(
+                 id='states_dropdown', 
+                 options=[{'value': x, 'label': x} 
+                   for x in df.State.sort_values().unique()],
+                 value='Massachusetts',
+                 multi = False,
+                 clearable=False,
+                 style = {"width":"50%"}
+                         ),
+             html.Br(),
+             html.Label(["Choose the Status:"]),
+             dcc.Dropdown(
+                 id='status_dropdown', 
+                 options=[{'value': y, 'label': y} 
+                   for y in df.Status.sort_values().unique()],
+                 value='Potential Recruiting',
+                 multi = False,
+                 clearable=False,
+                 style = {"width":"50%"}
+                         ),
+            html.Br(),
+            html.Label(["Choose the Gender:"]),
+            dcc.RadioItems(
+                           id = 'gender_radioItems',
+                           options=[
+                                    {'label': 'All', 'value': 'All'},
+                                    {'label': 'Female Only', 'value': 'Famale Only'},
+                                    {'label': 'Male Only', 'value': 'Male Only'}
+                                   ],
+                           value='All',
+                           labelStyle={'display': 'inline-block'}
+                          ),
+            html.Br(),
+            html.Label(["Choose the Phase:"]),
+            dcc.RadioItems(
+                          id = 'phase_radioItems',
+                          options=[
+                                  {'label': y, 'value': y}
+                                  for y in df.Phases.sort_values().unique()],
+                                   value='No Defined Phase'
+                                   ),
+            dcc.Graph(id = 'pie_chart',style = {'textAlign':'right'})
+                      ],
+            style={'columnCount': 2}),
     #html.Br(),
     #html.Div(id = 'table'),
     html.H2('Searched Results:',style={'textAlign': 'left'}),
     html.Div(id = 'datatable'),
-    # html.Br(),
-    # html.Br(),
+    html.Br(),
+    html.Br(),
     html.P('April 2021 RuiGuo'),
     html.Br(),
          ])
