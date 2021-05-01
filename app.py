@@ -119,7 +119,7 @@ def update_piechart(state,status,gender,phase):
                  values = df2.City.value_counts(),
                  names = df2.City.unique(),height = 680)
     fig.update_traces(textposition='inside', textinfo='percent+label')
-    fig.update_layout(title= str(len(df2)) + " clinical trials are found",                     
+    fig.update_layout(title = str(len(df2)) + " clinical trials are found",                     
                       font=dict(
                           family="Arial",
                           size=25,
