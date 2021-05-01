@@ -117,18 +117,14 @@ def update_piechart(state,status,gender,phase):
                            (df1['Gender'] == gender) & (df1['Phases'] == phase)]
     fig = px.pie(df2,
                  values = df2.City.value_counts(),
-                 names = df2.City.unique(),height = 670)
+                 names = df2.City.unique(),height = 660)
     fig.update_traces(textposition='inside', textinfo='percent+label')
     fig.update_layout(title= str(len(df2)) + " clinical trials are found",                     
                       font=dict(
                           family="Arial",
                           size=25,
                           color="RebeccaPurple"))
-    # if len(df2) > 0:
-    #     return fig
-    # elif len(dfd2) == 0:
-    #     return None
-    #     #raise dash.exceptions.NoLayoutException
+
     return fig
     
 
