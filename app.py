@@ -98,8 +98,8 @@ app.layout = html.Div([
     #html.Div(id = 'table'),
     html.H2('Searched Results:',style={'textAlign': 'left'}),
     html.Div(id = 'datatable'),
-    html.Br(),
-    html.Br(),
+    # html.Br(),
+    # html.Br(),
     html.P('April 2021 RuiGuo'),
     html.Br(),
          ])
@@ -118,7 +118,7 @@ def update_piechart(state,status,gender,phase):
                            (df1['Gender'] == gender) & (df1['Phases'] == phase)]
     fig = px.pie(df2,
                  values = df2.City.value_counts(),
-                 names = df2.City.unique(),height = 680)
+                 names = df2.City.unique(),height = 670)
     fig.update_traces(textposition='inside', textinfo='percent+label')
     fig.update_layout(title= str(len(df2)) + " clinical trials are found",                     
                       font=dict(
