@@ -92,7 +92,7 @@ app.layout = html.Div([
                                   for y in df.Phases.sort_values().unique()],
                                    value='No Defined Phase'
                                    ),
-            dcc.Graph(id = 'pie_chart',style = {'textAlign':'right'})
+            dcc.Graph(id = 'pie_chart',style = {'textAlign':'center'})
                       ],
             style={'columnCount': 2}),
     html.H2('Searched Results:',style={'textAlign': 'left'}),
