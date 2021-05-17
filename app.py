@@ -44,7 +44,7 @@ app.layout = html.Div([
                        finally help them to make the best decision. All the data source from:'),
     html.A('Click here for the website',href = " https://clinicaltrials.gov/",
            target = "_blank"),
-    html.P('The pie chart displays the percentage and number of clinical trails related \
+    html.P('The pie chart dynamically displays the percentage and number of clinical trails related \
            to Covid diseases by city in certain criterias. Detailed information \
                about the recruiting status, study topic, reference ID, location and authority \
                    is shown in the following table.'),
@@ -117,7 +117,7 @@ def update_piechart(state,status,gender,phase):
                            (df1['Gender'] == gender) & (df1['Phases'] == phase)]
     fig = px.pie(df2,
                  values = df2.City.value_counts(),
-                 names = df2.City.unique(),height = 700)
+                 names = df2.City.unique(),height = 680)
     fig.update_traces(textposition='inside', textinfo='percent+label')
     fig.update_layout(title = str(len(df2)) + " clinical trials are found",                     
                       font=dict(
