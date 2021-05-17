@@ -50,6 +50,7 @@ app.layout = html.Div([
                    is shown in the following table.'),
     html.Br(),
     html.Div([
+    html.Div([
              html.Label(["Choose the State:"]),
              dcc.Dropdown(
                  id='states_dropdown', 
@@ -91,10 +92,15 @@ app.layout = html.Div([
                                   {'label': y, 'value': y}
                                   for y in df.Phases.sort_values().unique()],
                                    value='No Defined Phase'
-                                   ),
+                                   )
+                                    ], className = "4 rows"),
+            html.Div([
             dcc.Graph(id = 'pie_chart',style = {'textAlign':'right'})
-                      ],
-            style={'columnCount': 2}),
+                      ])
+            
+            ],style={'columnCount': 2}),
+#    className = "2 columns"
+            # style={'columnCount': 2}),
     html.H2('Searched Results:',style={'textAlign': 'left'}),
     html.Div(id = 'datatable'),
     html.Br(),
