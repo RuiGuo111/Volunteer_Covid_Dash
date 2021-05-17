@@ -39,7 +39,7 @@ app.layout = html.Div([
     html.H3('User Guide of this Dashborad:',style = {'textAlign':'left'}),
     html.P('This dashboard summarizes and re-categorizes the information of on-going \
            clinical trials related to COVID-19 treatment in United States.It provides an \
-               easy-to-access pathway for the volunteers to search COVID-19 clinical trial \
+               easy-to-access pathway for the volunteers to search COVID-19 clinical trials \
                    recruiting information filtered by location, gender and clinical phase and \
                        finally help them to make the best decision. All the data source from:'),
     html.A('Click here for the website',href = " https://clinicaltrials.gov/",
@@ -119,11 +119,11 @@ def update_piechart(state,status,gender,phase):
                  values = df2.City.value_counts(),
                  names = df2.City.unique(),height = 100)
     fig.update_traces(textposition='inside', textinfo='percent+label')
-#    fig.update_layout(title = str(len(df2)) + " clinical trials are found",                     
-#                      font=dict(
-#                          family="Arial",
-#                          size=25,
-#                          color="RebeccaPurple"))
+    fig.update_layout(title = str(len(df2)) + " clinical trials are found",                     
+                      font=dict(
+                          family="Arial",
+                          size=25,
+                          color="RebeccaPurple"))
 
     return fig
     
