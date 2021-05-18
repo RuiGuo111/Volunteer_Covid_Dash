@@ -36,7 +36,7 @@ df = pd.read_pickle('covid_studies.pkl')
 
 
 app.layout = html.Div([
-    html.H1('Where Recruit Volunteers for Covid Clinical Trials?', style={'textAlign': 'center'}),
+    html.H1('Where Recruiting Volunteers for Covid Clinical Trials?', style={'textAlign': 'center'}),
     html.H3('User Guide of this Dashborad:',style = {'textAlign':'left'}),
     html.P('This dashboard summarizes and re-categorizes the information of on-going \
            clinical trials related to COVID-19 treatment in United States.It provides an \
@@ -184,6 +184,6 @@ def update_table(state,status,gender,phase):
 server = app.server
 
 if __name__ == '__main__':
-     app.run_server(debug=True)
+     app.run_server(debug=False)
 
 
