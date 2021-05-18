@@ -6,6 +6,7 @@ Created on Wed Apr 28 01:19:25 2021
 """
 
 import dash
+import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
@@ -93,12 +94,12 @@ app.layout = html.Div([
                                   for y in df.Phases.sort_values().unique()],
                                    value='No Defined Phase'
                                    )
-                                    ], className = "4 rows"),
+                                    ], className = "four rows"),
             html.Div([
             dcc.Graph(id = 'pie_chart',style = {'textAlign':'right'})
                       ])
             
-            ],style={'columnCount': 2}),
+            ], style={'columnCount': 2}),
 #    className = "2 columns"
             # style={'columnCount': 2}),
     html.H2('Searched Results:',style={'textAlign': 'left'}),
