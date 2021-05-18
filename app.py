@@ -45,22 +45,23 @@ app.layout = html.Div([
                        finally help them to make the best decision. All the data source from:'),
     html.A('Click here for the website',href = " https://clinicaltrials.gov/",
            target = "_blank"),
+    html.Br(),
     html.P('The pie chart dynamically displays the percentage and number of clinical trails related \
            to Covid diseases by city in certain criterias. Detailed information \
                about the recruiting status, study topic, reference ID, location and authority \
                    is shown in the following table.'),
     html.Br(),
-    html.Div([
+    html.Hr(),
+    
     html.Div([
              html.Label(["Choose the State:"]),
-             dcc.Dropdown(
-                 id='states_dropdown', 
-                 options=[{'value': x, 'label': x} 
-                   for x in df.State.sort_values().unique()],
-                 value='Massachusetts',
-                 multi = False,
-                 clearable=False,
-                 style = {"width":"50%"}
+             dcc.Dropdown(id='states_dropdown', 
+                          options=[{'value': x, 'label': x} 
+                          for x in df.State.sort_values().unique()],
+                          value='Massachusetts',
+                          multi = False,
+                          clearable=False,
+                 
                          ),
              html.Br(),
              html.Label(["Choose the Status:"]),
@@ -71,7 +72,7 @@ app.layout = html.Div([
                  value='Potential Recruiting',
                  multi = False,
                  clearable=False,
-                 style = {"width":"50%"}
+#                 style = {"width":"50%"}
                          ),
             html.Br(),
             html.Label(["Choose the Gender:"]),
@@ -94,12 +95,15 @@ app.layout = html.Div([
                                   for y in df.Phases.sort_values().unique()],
                                    value='No Defined Phase'
                                    )
-                                    ], className = "four rows"),
-            html.Div([
-            dcc.Graph(id = 'pie_chart',style = {'textAlign':'right'})
-                      ])
+                                    ], 
+           style = {"width":"40%",'display': 'inline-block', 'vertical-align' : 'top'}),
+    html.Div([],
+             style={'width': '5%', 'display': 'inline-block'}),
+    html.Div([dcc.Graph(id = 'pie_chart',style = {'textAlign':'right'})
+                      ],
+             style = {"width":"55%",'display': 'inline-block', 'vertical-align' : 'top'}),
             
-            ], style={'columnCount': 2}),
+#            ], style={'columnCount': 2}),
 #    className = "2 columns"
             # style={'columnCount': 2}),
     html.H2('Searched Results:',style={'textAlign': 'left'}),
